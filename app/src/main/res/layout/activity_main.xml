@@ -14,7 +14,7 @@
             android:id="@+id/tv_result"
             android:layout_width="match_parent"
             android:layout_height="75dp"
-            android:text=""
+            android:text=""dfdsfdsf
             android:textSize="35dp"
             android:textStyle="bold" />
         <TextView
