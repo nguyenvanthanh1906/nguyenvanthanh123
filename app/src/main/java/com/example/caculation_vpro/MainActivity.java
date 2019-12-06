@@ -10,13 +10,10 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    Button b1, b2, b3, b4, b5, b6, b7, b8, b9, b0, enter, cong,tru,nhan,chia, clear,clearall;
+    Button b1, b2, b3, b4, b5, b6, b7, b8, b9, b0, enter, cong,tru,nhan,chia, clear,clearall,cham;
     boolean i=false;
     TextView ed1, ed2,ed3,ed4;
-    Double var1;
-    Double var2;
-    Double ans;
-    Boolean addition = false, subtract = false, multiply = false, divide = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,136 +39,185 @@ public class MainActivity extends AppCompatActivity {
         ed3=findViewById(R.id.edit3);
         ed4=findViewById(R.id.edit4);
         clearall=findViewById(R.id.btnClearAll);
+        cham=findViewById(R.id.btnPoint);
         cong.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(ed2.getText().toString().equals("")){
                 if(!i){
                 ed2.setText(ed2.getText()+"+");
-                  i=true;}
+                  i=true;}}else {
+                    ed1.setText(ed4.getText().toString());
+                    ed2.setText("");
+                    ed2.setText(ed2.getText()+"+");
+                    ed3.setText("");
+                    ed4.setText("");
+                }
             }
         });
         tru.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!i){
-                ed2.setText(ed2.getText()+"-");
-                  i=true;}
+                if(ed2.getText().toString().equals("")){
+                    if(!i){
+                        ed2.setText(ed2.getText()+"-");
+                        i=true;}}else {
+                    ed1.setText(ed4.getText().toString());
+                    ed2.setText("");
+                    ed2.setText(ed2.getText()+"-");
+                    ed3.setText("");
+                    ed4.setText("");
+                }
             }
         });
         nhan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!i){
-                ed2.setText(ed2.getText()+"x");
-                 i=true;}
+                if(ed2.getText().toString().equals("")){
+                    if(!i){
+                        ed2.setText(ed2.getText()+"x");
+                        i=true;}}else {
+                    ed1.setText(ed4.getText().toString());
+                    ed2.setText("");
+                    ed2.setText(ed2.getText()+"x");
+                    ed3.setText("");
+                    ed4.setText("");
+                }
             }
         });
         chia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!i){
-                ed2.setText(ed2.getText()+":");
-                 i=true;}
+                if(ed2.getText().toString().equals("")){
+                    if(!i){
+                        ed2.setText(ed2.getText()+":");
+                        i=true;}}else {
+                    ed1.setText(ed4.getText().toString());
+                    ed2.setText("");
+                    ed2.setText(ed2.getText()+":");
+                    ed3.setText("");
+                    ed4.setText("");
+                }
             }
         });
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(i){
-                    ed3.setText(ed3.getText()+"1");
-                }else {
-                    ed1.setText(ed1.getText()+"1");
+                if (ed4.getText().toString().equals("")) {
+                    if (i) {
+                        ed3.setText(ed3.getText() + "1");
+                    } else {
+                        ed1.setText(ed1.getText() + "1");
+                    }
                 }
             }
         });
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(i){
-                    ed3.setText(ed3.getText()+"2");
-                }else {
-                    ed1.setText(ed1.getText()+"2");
+                if (ed4.getText().toString().equals("")) {
+                    if (i) {
+                        ed3.setText(ed3.getText() + "2");
+                    } else {
+                        ed1.setText(ed1.getText() + "2");
+                    }
                 }
             }
         });
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(i){
-                    ed3.setText(ed3.getText()+"3");
-                }else {
-                    ed1.setText(ed1.getText()+"3");
+                if (ed4.getText().toString().equals("")) {
+                    if (i) {
+                        ed3.setText(ed3.getText() + "3");
+                    } else {
+                        ed1.setText(ed1.getText() + "3");
+                    }
                 }
             }
         });
         b4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(i){
-                    ed3.setText(ed3.getText()+"4");
-                }else {
-                    ed1.setText(ed1.getText()+"4");
+                if (ed4.getText().toString().equals("")) {
+                    if (i) {
+                        ed3.setText(ed3.getText() + "4");
+                    } else {
+                        ed1.setText(ed1.getText() + "4");
+                    }
                 }
             }
         });
         b5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(i){
-                    ed3.setText(ed3.getText()+"5");
-                }else {
-                    ed1.setText(ed1.getText()+"5");
+                if (ed4.getText().toString().equals("")) {
+                    if (i) {
+                        ed3.setText(ed3.getText() + "5");
+                    } else {
+                        ed1.setText(ed1.getText() + "5");
+                    }
                 }
             }
         });
         b6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(i){
-                    ed3.setText(ed3.getText()+"6");
-                }else {
-                    ed1.setText(ed1.getText()+"6");
+                if (ed4.getText().toString().equals("")) {
+                    if (i) {
+                        ed3.setText(ed3.getText() + "6");
+                    } else {
+                        ed1.setText(ed1.getText() + "6");
+                    }
                 }
             }
         });
         b7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(i){
-                    ed3.setText(ed3.getText()+"7");
-                }else {
-                    ed1.setText(ed1.getText()+"7");
+                if (ed4.getText().toString().equals("")) {
+                    if (i) {
+                        ed3.setText(ed3.getText() + "7");
+                    } else {
+                        ed1.setText(ed1.getText() + "7");
+                    }
                 }
             }
         });
         b8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(i){
-                    ed3.setText(ed3.getText()+"8");
-                }else {
-                    ed1.setText(ed1.getText()+"8");
+                if (ed4.getText().toString().equals("")) {
+                    if (i) {
+                        ed3.setText(ed3.getText() + "8");
+                    } else {
+                        ed1.setText(ed1.getText() + "8");
+                    }
                 }
             }
         });
         b9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(i){
-                    ed3.setText(ed3.getText()+"9");
-                }else {
-                    ed1.setText(ed1.getText()+"9");
+                if (ed4.getText().toString().equals("")) {
+                    if (i) {
+                        ed3.setText(ed3.getText() + "9");
+                    } else {
+                        ed1.setText(ed1.getText() + "9");
+                    }
                 }
             }
         });
         b0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(i){
-                    ed3.setText(ed3.getText()+"0");
-                }else {
-                    ed1.setText(ed1.getText()+"0");
+                if (ed4.getText().toString().equals("")) {
+                    if (i) {
+                        ed3.setText(ed3.getText() + "0");
+                    } else {
+                        ed1.setText(ed1.getText() + "0");
+                    }
                 }
             }
         });
@@ -190,10 +236,42 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        cham.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (ed4.getText().toString().equals("")) {
+                    if (i) {
+                        ed3.setText(ed3.getText() + ".");
+                    } else {
+                        ed1.setText(ed1.getText() + ".");
+                    }
+                }
+            }
+        });
     clear.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            ed1.setText((ed1.getText().toString()).substring(0,(ed1.getText().toString()).length()-1));
+            if (ed4.getText().toString().equals("")){
+            String text1=ed1.getText().toString();
+            String text2=ed2.getText().toString();
+            String text3=ed3.getText().toString();
+            if((text2.equals(""))&&(text3.equals(""))){
+             if ((ed1.getText().toString().length())!=0) {
+               ed1.setText((ed1.getText().toString()).substring(0, (ed1.getText().toString()).length() - 1));
+           }
+            }
+            if (text3.equals("")&&(!(text1.equals("")))) {
+                if ((ed2.getText().toString().length())!=0) {
+                ed2.setText("");
+                i=false;}
+            }
+            if(!(text2.equals(""))) {
+                if ((ed3.getText().toString().length())!=0) {
+                ed3.setText((ed3.getText().toString()).substring(0, (ed3.getText().toString()).length() - 1));
+                if(text2.equals("")){i=false;}
+            }
+            }
+            }
         }
     });
     clearall.setOnClickListener(new View.OnClickListener() {
@@ -210,13 +288,13 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-    int add (int a, int b){ return a+b; }
-    int slib(int a, int b){return a-b;}
-    int muv( int a ,int b){return a*b;}
-    int div(int a, int b){return a/b;}
+    float add (float a, float b){ return a+b; }
+    float slib(float a, float b){return a-b;}
+    float muv( float a ,float b){return a*b;}
+    float div(float a, float b){return a/b;}
     public void caculation(int k ){
-        int a =Integer.parseInt( ed1.getText().toString());
-        int b =Integer.parseInt( ed3.getText().toString());
+        float a =Float.parseFloat( ed1.getText().toString());
+        float b =Float.parseFloat( ed3.getText().toString());
         String kq_cong=String.valueOf(add(a,b));
         String kq_tru=String.valueOf(slib(a,b));
         String kq_nhan=String.valueOf(muv(a,b));
