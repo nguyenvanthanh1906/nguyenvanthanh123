@@ -43,60 +43,76 @@ public class MainActivity extends AppCompatActivity {
         cong.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(ed2.getText().toString().equals("")){
-                if(!i){
-                ed2.setText(ed2.getText()+"+");
-                  i=true;}}else {
-                    ed1.setText(ed4.getText().toString());
-                    ed2.setText("");
-                    ed2.setText(ed2.getText()+"+");
-                    ed3.setText("");
-                    ed4.setText("");
+                if (!(ed1.getText().toString().equals(""))) {
+                    if (ed2.getText().toString().equals("")) {
+                        if (!i) {
+                            ed2.setText(ed2.getText() + "+");
+                            i = true;
+                        }
+                    } else {
+                        ed1.setText(ed4.getText().toString());
+                        ed2.setText("");
+                        ed2.setText(ed2.getText() + "+");
+                        ed3.setText("");
+                        ed4.setText("");
+                    }
                 }
             }
         });
         tru.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(ed2.getText().toString().equals("")){
-                    if(!i){
-                        ed2.setText(ed2.getText()+"-");
-                        i=true;}}else {
-                    ed1.setText(ed4.getText().toString());
-                    ed2.setText("");
-                    ed2.setText(ed2.getText()+"-");
-                    ed3.setText("");
-                    ed4.setText("");
+                if (!(ed1.getText().toString().equals(""))) {
+                    if (ed2.getText().toString().equals("")) {
+                        if (!i) {
+                            ed2.setText(ed2.getText() + "-");
+                            i = true;
+                        }
+                    } else {
+                        ed1.setText(ed4.getText().toString());
+                        ed2.setText("");
+                        ed2.setText(ed2.getText() + "-");
+                        ed3.setText("");
+                        ed4.setText("");
+                    }
                 }
             }
         });
         nhan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(ed2.getText().toString().equals("")){
-                    if(!i){
-                        ed2.setText(ed2.getText()+"x");
-                        i=true;}}else {
-                    ed1.setText(ed4.getText().toString());
-                    ed2.setText("");
-                    ed2.setText(ed2.getText()+"x");
-                    ed3.setText("");
-                    ed4.setText("");
+                if (!(ed1.getText().toString().equals(""))) {
+                    if (ed2.getText().toString().equals("")) {
+                        if (!i) {
+                            ed2.setText(ed2.getText() + "x");
+                            i = true;
+                        }
+                    } else {
+                        ed1.setText(ed4.getText().toString());
+                        ed2.setText("");
+                        ed2.setText(ed2.getText() + "x");
+                        ed3.setText("");
+                        ed4.setText("");
+                    }
                 }
             }
         });
         chia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(ed2.getText().toString().equals("")){
-                    if(!i){
-                        ed2.setText(ed2.getText()+":");
-                        i=true;}}else {
-                    ed1.setText(ed4.getText().toString());
-                    ed2.setText("");
-                    ed2.setText(ed2.getText()+":");
-                    ed3.setText("");
-                    ed4.setText("");
+                if (!(ed1.getText().toString().equals(""))) {
+                    if (ed2.getText().toString().equals("")) {
+                        if (!i) {
+                            ed2.setText(ed2.getText() + ":");
+                            i = true;
+                        }
+                    } else {
+                        ed1.setText(ed4.getText().toString());
+                        ed2.setText("");
+                        ed2.setText(ed2.getText() + ":");
+                        ed3.setText("");
+                        ed4.setText("");
+                    }
                 }
             }
         });
