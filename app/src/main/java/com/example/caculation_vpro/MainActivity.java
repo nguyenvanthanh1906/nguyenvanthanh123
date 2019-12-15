@@ -514,7 +514,7 @@ public class MainActivity extends AppCompatActivity {
     public void caculation(int k) {
         if (ed1.getText().toString().length() > 4) {
 
-            if (ed1.getText().toString().substring(0, 4).equals("sin(") || ed1.getText().toString().substring(0, 4).equals("cos(") || ed1.getText().toString().substring(0, 4).equals("tan(") || ed1.getText().toString().substring(0, 4).equals("log(") ) {
+            if (ed1.getText().toString().substring(0, 3).equals("ln(") ||ed1.getText().toString().substring(0, 4).equals("sin(") || ed1.getText().toString().substring(0, 4).equals("cos(") || ed1.getText().toString().substring(0, 4).equals("tan(") || ed1.getText().toString().substring(0, 4).equals("log(") ) {
                 if (ed1.getText().toString().substring(0, 4).equals("sin(")) {
                     float a = Float.parseFloat(ed1.getText().toString().substring(4));
                     ed4.setText(String.valueOf(Math.sin(a)));
@@ -531,9 +531,14 @@ public class MainActivity extends AppCompatActivity {
                     float a = Float.parseFloat(ed1.getText().toString().substring(4));
                     ed4.setText(String.valueOf(Math.log10(a)));
                 }
+                if (ed1.getText().toString().substring(0, 3).equals("ln(")) {
+                    float a = Float.parseFloat(ed1.getText().toString().substring(3));
+                    float b=(float)Math.log(a);
+                    float c= (float) Math.log(2.718281828);
+                    ed4.setText(String.valueOf(div(b,c)));
+                }
 
-
-            } else {
+            } else  {
                 float a = Float.parseFloat(ed1.getText().toString());
                 float b = Float.parseFloat(ed3.getText().toString());
                 String kq_cong = String.valueOf(add(a, b));
@@ -562,7 +567,9 @@ public class MainActivity extends AppCompatActivity {
         } else if (ed1.getText().toString().length() > 3) {
             if (ed1.getText().toString().substring(0, 3).equals("ln(")) {
                 float a = Float.parseFloat(ed1.getText().toString().substring(3));
-                ed4.setText(String.valueOf((Math.log(a))/(Math.log(2.718281828))));
+                float b=(float)Math.log(a);
+                float c= (float) Math.log(2.718281828);
+                ed4.setText(String.valueOf(div(b,c)));
             }
         }else {
             float a = Float.parseFloat(ed1.getText().toString());
